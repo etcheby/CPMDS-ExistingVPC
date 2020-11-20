@@ -1,6 +1,6 @@
 # Description
-This repository terraform helps you deploying Check Point MDS (Multi Domain Server) in an existing AWS VPC and subnet using Terraform. 
-Essentially we're using TF to deploy a CFT resource leveraging Check Point CFT #13 from SK111013
+This terraform template helps you deploying Check Point MDS (Multi Domain Server) in an existing AWS VPC and subnet. 
+Essentially we're deploying a Terraform CFT resource leveraging Check Point CFT #13 from SK111013
 https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk111013&partition=General&product=vSEC
 
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/MDS-CFT.png)
