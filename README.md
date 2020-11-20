@@ -3,7 +3,7 @@ This repository terraform helps you deploying Check Point MDS (Multi Domain Serv
 Essentially we're using TF to deploy a CFT resource leveraging Check Point CFT #13 from SK111013
 https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk111013&partition=General&product=vSEC
 
-![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/master/images/MDS-CFT.png)
+![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/MDS-CFT.png)
 
 # Environment
 Terraform AWS Prodiver 3.15
@@ -35,7 +35,7 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 * Installation Type
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/Installation.png)
 
-#Deployment
+# Deployment
 
 1- After entering the CFT parameters and required variables in variables.tf file 
 
@@ -50,6 +50,14 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 3- Run "terraform apply --auto-approve" - and make sure to enter both existing VPC ID and Subnet ID
 
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/apply.png)
+
+4- If completed, Terraform will let you know deployment was successful and you can also check AWS CloudFormation to validate your stack is completed. 
+
+![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/completed.png)
+
+![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/CFT.png)
+
+
 
 
 
