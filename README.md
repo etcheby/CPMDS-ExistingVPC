@@ -33,6 +33,7 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/Version.png)
 
 * Installation Type
+
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/Installation.png)
 
 # Deployment
