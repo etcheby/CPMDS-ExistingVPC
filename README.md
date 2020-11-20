@@ -42,8 +42,13 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 1- After entering the CFT parameters and required variables in variables.tf file 
 
    Run "terraform init" to download the aws plugin. 
+   
+![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/init.png)
+
    Run "terraform validate" to ensure configuration is valid 
    
+![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/validate.png)
+
 2- Run "terraform plan" and enter both existing VPC ID and Subnet ID
 
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/plan.png)
