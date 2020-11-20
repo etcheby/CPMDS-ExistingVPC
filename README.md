@@ -20,6 +20,7 @@ https://www.terraform.io/docs/cloud/workspaces/variables.html#how-terraform-clou
 In the checkpoint.tf file you must enter value for CFT permissions
 
 * For Instance Type - select from option below
+
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/master/images/instance.png)
 
 * For MDS IAM Permissions - Note this is relevant should you need to manage Check Point Autoscaling Groups with or without TGW - For more information on each of
