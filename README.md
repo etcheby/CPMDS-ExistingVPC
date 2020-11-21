@@ -6,7 +6,7 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/MDS-CFT.png)
 
 # Environment
-* Terraform AWS Prodiver v.0.13.5
+* Terraform AWS Prodiver v3.15.0
 * Authentication method used on the provider.tf is shared credentials file stored local machine. Terraform Cloud isn't covered. 
 See Terraform documention for other available AWS authentication:   
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs
