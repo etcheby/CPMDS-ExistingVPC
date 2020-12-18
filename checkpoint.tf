@@ -14,11 +14,19 @@ resource "aws_cloudformation_stack" "CP_MDS" {
     InstallationType      = "Primary Multi-Domain Server"
     Shell                 = "/bin/bash"
     Permissions           = "Create with read-write permissions"
-    EnableInstanceConnect = "false"
-    VolumeEncryption      = ""
+    EnableInstanceConnect = "true"
+    PredefinedRole        = var.mds_iamrole
+    STSRoles              = var.sts_roles
+    AllowUploadDownload   = "true"
+    AdminSubnet           = var.admin_subnet
+    GatewaysAddresses     = var.gateway_addresses
+    VolumeSize            = "100"
+    VolumeEncryption      = var.kmskey_identifier
     Hostname              = ""
-    STSRoles              = ""
-    SICKey                = "${var.sic_key}"
+    SICKey                = var.sic_key
+    NTPPrimary            = "169.254.169.123"
+    NTPSecondary          = "0.pool.ntp.org"
+    BootstrapScript       = ""
 
 
   }
@@ -28,4 +36,3 @@ resource "aws_cloudformation_stack" "CP_MDS" {
   disable_rollback   = true
   timeout_in_minutes = 25
 }
-
