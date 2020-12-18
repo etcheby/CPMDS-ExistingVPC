@@ -6,12 +6,22 @@
 
 variable "mds_vpc" {
   description = "Existing VPC ID"
-  default     = ""
+  default     = "vpc-0191eb7d40d4bee7e"
 }
 
 variable "mds_subnet" {
   description = "Existing Subnet ID"
-  default     = "" 
+  default     = "subnet-05d08b9d1dac08ee7" 
+}
+
+variable "admin_subnet" {
+  description = "Allow web, SSH, and graphical clients only from this network to communicate with the Management Server"
+  default     = "0.0.0.0/0" 
+}
+
+variable "gateway_addresses" {
+  description = "Allow gateways only from this network to communicate with the Management Server"
+  default     = "0.0.0.0/0"
 }
 
 #######################################################
@@ -23,6 +33,11 @@ variable "mds_subnet" {
 variable "password_hash" {
   description = "Hashed password for the Check Point servers - Optional but recommended"
   default     = "$1$5b8270b8$XTwkTQUC.Ddce5rSALyBj/"
+}
+
+variable "sts_roles" {
+  description = "IAM Roles Assumed by CP MDS to other AWS accounts"
+  default     = ""
 }
 
 variable "sic_key" {
@@ -37,7 +52,17 @@ variable "cpversion" {
 
 variable "key_name" {
   description = "Key Pair to SSH into Check Point instances"
-  default     = "TGW"
+  default     = "AWSLab"
+}
+
+variable "mds_iamrole" {
+  description = "Predefined IAM Role for CP MDS Instance"
+  default     = "Checkpoint_EA"
+}
+
+variable "kmskey_identifier" {
+  description = "KMS or CMK key Identifier - Use key ID, alias or ARN. Key alias should be prefixed with 'alias/' "
+  default     = "alias/aws/ebs"
 }
 
 variable "mds_instance_type" {
