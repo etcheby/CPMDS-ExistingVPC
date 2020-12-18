@@ -4,16 +4,14 @@
 
 # MDS Existing VPC & Subnet
 
-variable "mds_vpc" {}
-
-data "aws_vpc" "selected" {
-  id = var.mds_vpc
+variable "mds_vpc" {
+  description = "Existing VPC ID"
+  default     = ""
 }
 
-variable "mds_subnet" {}
-
-data "aws_subnet" "selected" {
-  id = var.mds_subnet
+variable "mds_subnet" {
+  description = "Existing Subnet ID"
+  default     = "" 
 }
 
 #######################################################
