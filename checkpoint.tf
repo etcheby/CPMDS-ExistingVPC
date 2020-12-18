@@ -4,13 +4,13 @@ resource "aws_cloudformation_stack" "CP_MDS" {
   name = "Checkpoint-MDS"
 
   parameters = {
-    VPC                   = "${var.mds_vpc}"
-    Subnet                = "${var.mds_subnet}"
+    VPC                   = var.mds_vpc
+    Subnet                = var.mds_subnet
     Name                  = "CP-MDS"
-    InstanceType          = "${var.mds_instance_type}"
+    InstanceType          = var.mds_instance_type
     Version               = "${var.cpversion}-BYOL"
-    KeyName               = "${var.key_name}"
-    PasswordHash          = "${var.password_hash}"
+    KeyName               = var.key_name
+    PasswordHash          = var.password_hash
     InstallationType      = "Primary Multi-Domain Server"
     Shell                 = "/bin/bash"
     Permissions           = "Create with read-write permissions"
