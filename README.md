@@ -41,7 +41,7 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
 
 1- After entering the CFT parameters and required variables in variables.tf file 
 
-   Run "terraform init" to download the aws plugin. 
+   Run "terraform init" to download the aws plugin. (I'm assuming you're using local storage and state file) 
    
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/init.png)
 
@@ -49,16 +49,11 @@ https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewso
    
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/validate.png)
 
-2- Run "terraform plan" and enter both existing VPC ID and Subnet ID
+2- Run "terraform plan"
 
-![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/plan.png)
+3- Run "terraform apply --auto-approve" (make sure you've entered VPC and Subnet ID in the variables.tf file)
 
-
-3- Run "terraform apply --auto-approve" - and make sure to enter both existing VPC ID and Subnet ID
-
-![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/apply.png)
-
-4- If completed, Terraform will let you know deployment was successful and you can also check AWS CloudFormation to validate your stack is completed. 
+4- When completed, Terraform will let you know deployment was successful and you can also check AWS CloudFormation to validate your stack is completed. 
 
 ![alt text](https://github.com/etcheby/Terraform-CP_MDS-ExistingVPC/blob/main/images/completed.png)
 
